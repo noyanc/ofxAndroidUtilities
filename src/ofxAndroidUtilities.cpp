@@ -21,7 +21,7 @@
 
 ofxAndroidUtilities::ofxAndroidUtilities() {
 	//First of all, we get the java class of our addon
-	thisJava = getJavaClass("cc/openframeworks/jniaddons/OFxAndroidUtilities");
+	thisJava = getJavaClass("cc/openframeworks/jniaddons/OFXAndroidUtilities");
 }
 
 
