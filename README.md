@@ -12,11 +12,15 @@ I use a special installation of openFrameworks. If you use openFrameworks with t
 
 
 OBJECTIVE:
+
 This software provides some utilities from Android to native side.
 
 USAGE:
+
 Add the src part of the addon like regular ofx addons. Then add the srcJava/cc/openframeworks/jniaddons directory under your srcJava directory or under src/cc.openframeworks.jniaddons directory of the final project.
 
 Then the rest is really very easy:
+
 ofxAndroidUtilities ofxandroidutilities; (into ofApp.h)
+
 ofxandroidutilities.getDeviceName(); (or any method) (into ofApp.cpp)
