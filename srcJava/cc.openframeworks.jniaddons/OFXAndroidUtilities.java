@@ -21,9 +21,9 @@ import android.util.Log;
 
 
 
-public class OFxAndroidUtilities extends cc.openframeworks.OFAndroidObject{
+public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 	
-	public OFxAndroidUtilities() {
+	public OFXAndroidUtilities() {
 	}
 	
 	
@@ -99,7 +99,7 @@ public class OFxAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 		try {
 			installerpackage = activity.getPackageManager().getInstallerPackageName(getPackageName());
 		} catch(Exception e) {
-			Log.e("OFxAndroidUtilities", "" + e);
+			Log.e("OFXAndroidUtilities", "" + e);
 			installerpackage = "";
 		}
 		if (installerpackage == null || installerpackage.equals("")) installerpackage = "terminal";
