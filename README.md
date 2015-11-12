@@ -1,7 +1,7 @@
 # ofxAndroidUtilities
 Some utilities and helpers for openFrameworks-Android
 
-This software is a Android addon for openFrameworks with MIT Licence. You can visit http://openframeworks.cc for more information about how to use openFrameworks and its addons.
+This software is a openFrameworks-Android addon with MIT Licence. You can visit http://openframeworks.cc for more information about how to use openFrameworks and its addons.
 
 
 PLEASE NOTE THAT THIS ADDON IS EXPERIMENTAL! IT WOULD BE GREAT IF YOU CAN WRITE ME YOUR RESULT!
