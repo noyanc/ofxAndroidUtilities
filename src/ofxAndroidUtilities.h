@@ -69,7 +69,7 @@ public:
 	void saveURL(std::string url, std::string fileName);
 	void sendEmail(std::string toEmailAddress, std::string subject, std::string message);
 
-	//Database utilities
+	//Storage utilities
 	std::string getUserPrefs();
 	void setUserPrefs(std::string prefStr);
 
