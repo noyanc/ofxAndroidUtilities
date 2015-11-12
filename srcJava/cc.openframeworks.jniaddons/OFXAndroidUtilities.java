@@ -78,6 +78,11 @@ public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 	    return availableRam;
 	}
 	
+	
+	private static long getUsedRAMSize() {
+		return getTotalRAMSize() - getFreeRAMSize(); 
+	}
+	
 
 	private static String getRealExternalStorageDirectory() {
 		return cc.openframeworks.OFAndroid.getRealExternalStorageDirectory();

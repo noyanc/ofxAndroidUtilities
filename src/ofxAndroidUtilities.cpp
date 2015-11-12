@@ -42,14 +42,14 @@ int ofxAndroidUtilities::getAndroidApiLevel() {
 }
 
 
-long ofxAndroidUtilities::getTotalRAMSize() {
+long ofxAndroidUtilities::getRAMSizeTotal() {
 	//Total RAM size assigned to this app
 	return ofGetJNIEnv()->CallStaticLongMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "getTotalRAMSize", "()J"));
 }
 
 
-long ofxAndroidUtilities::getFreeRAMSize() {
-	//Total Android RAM size we used
+long ofxAndroidUtilities::getRAMSizeFree() {
+	//Free Android RAM size
 	return ofGetJNIEnv()->CallStaticLongMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "getFreeRAMSize", "()J"));
 }
 
@@ -75,6 +75,12 @@ std::string ofxAndroidUtilities::getPackageName() {
 std::string ofxAndroidUtilities::getInstallerPackage() {
 	//The market from where our app is installed to this device: Play Store, Amazon, a third party market or "terminal"(direct install)
 	return getValueStr("getInstallerPackage");
+}
+
+
+long ofxAndroidUtilities::getRAMSizeUsed() {
+	//Android RAM size we used
+	return ofGetJNIEnv()->CallStaticLongMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "getUsedRAMSize", "()J"));
 }
 
 

@@ -54,14 +54,15 @@ public:
 	//Device properties
 	std::string getDeviceName();
 	int getAndroidApiLevel();
-	long getTotalRAMSize();
-	long getFreeRAMSize();
+	long getRAMSizeTotal();
+	long getRAMSizeFree();
 	std::string getRealExternalStorageDirectory();
 	std::string getAppDataDirectory();
 
 	//App properties
 	std::string getPackageName();
 	std::string getInstallerPackage();
+	long getRAMSizeUsed();
 
 	//Internet utilities
 	void visitURL(std::string url);
