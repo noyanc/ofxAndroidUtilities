@@ -1,11 +1,11 @@
 # ofxAndroidUtilities
-Some utilities and helper for openFrameworks-Android
+Some utilities and helpers for openFrameworks-Android
 
 This software is a Android addon for openFrameworks with MIT Licence. You can visit http://openframeworks.cc for more information about how to use openFrameworks and its addons.
 
 
-PLEASE NOTE THAT THIS ADDON IS EXPERIMENTAL!
-IT WOULD BE GREAT IF YOU CAN WRITE ME YOUR RESULT!
+PLEASE NOTE THAT THIS ADDON IS EXPERIMENTAL! IT WOULD BE GREAT IF YOU CAN WRITE ME YOUR RESULT!
+
 I tested this addon with Eclipse + oF080 + Android 5.0.1. If you use a different version of openFrameworks or any version with Android Studio or if you target a different Android Api; please let me know if this addon works or not.
 
 I use a special installation of openFrameworks. If you use openFrameworks with the regular installation as described on the oF website, please let me know again if this works for you. Please report me your result, as I think to add further helpful methods into this addon.
