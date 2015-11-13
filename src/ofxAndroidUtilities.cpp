@@ -43,7 +43,7 @@ int ofxAndroidUtilities::getAndroidApiLevel() {
 
 
 long ofxAndroidUtilities::getRAMSizeTotal() {
-	//Total RAM size assigned to this app
+	//Total RAM size assigned to this app by Android OS
 	return ofGetJNIEnv()->CallStaticLongMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "getTotalRAMSize", "()J"));
 }
 

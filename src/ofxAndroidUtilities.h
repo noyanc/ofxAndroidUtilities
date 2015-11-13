@@ -83,7 +83,7 @@ public:
 	std::string getISO3Language();
 
 
-	//Various
+	//Various utilities
 	jclass getJavaClass(std::string javaClassName);
 
 
