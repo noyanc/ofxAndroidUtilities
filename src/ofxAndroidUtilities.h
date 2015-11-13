@@ -65,7 +65,7 @@ public:
 	long getRAMSizeUsed();
 
 	//Internet utilities
-	void visitURL(std::string url);
+	void openURL(std::string url);
 	std::string loadURL(std::string url);
 	void saveURL(std::string url, std::string fileName);
 	void sendEmail(std::string toEmailAddress, std::string subject, std::string message);

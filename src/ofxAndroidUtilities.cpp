@@ -21,7 +21,7 @@
 
 ofxAndroidUtilities::ofxAndroidUtilities() {
 	//First of all, we get the java class of our addon
-	thisJava = getJavaClass("cc/openframeworks/jniaddons/OFXAndroidUtilities");
+	thisJava = getJavaClass("cc/openframeworks/ofxaddons/OFXAndroidUtilities");
 }
 
 
@@ -84,10 +84,10 @@ long ofxAndroidUtilities::getRAMSizeUsed() {
 }
 
 
-void ofxAndroidUtilities::visitURL(std::string url) {
+void ofxAndroidUtilities::openURL(std::string url) {
 	//This method opens an url in the browser of Android. When he press back button, he returns to our app
 	jstring jStringParam = ofGetJNIEnv()->NewStringUTF(url.c_str());
-	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "visitURL", "(Ljava/lang/String;)V"), jStringParam);
+	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "openURL", "(Ljava/lang/String;)V"), jStringParam);
 	ofGetJNIEnv()->DeleteLocalRef(jStringParam);
 }
 

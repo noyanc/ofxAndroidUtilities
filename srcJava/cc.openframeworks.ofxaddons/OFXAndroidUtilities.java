@@ -1,4 +1,4 @@
-package cc.openframeworks.jniaddons;
+package cc.openframeworks.ofxaddons;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -112,7 +112,7 @@ public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 	}
 	
 	
-	private static void visitURL(String url) {
+	private static void openURL(String url) {
 		activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 	}
 	

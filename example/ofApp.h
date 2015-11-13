@@ -33,5 +33,5 @@ class ofApp : public ofxAndroidApp{
 		void cancelPressed();
 
 	private:
-		ofxAndroidUtilities androidutilities;
+		ofxAndroidUtilities ofxandroidutilities;
 };

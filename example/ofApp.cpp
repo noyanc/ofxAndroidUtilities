@@ -2,10 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	ofLogNotice("ofApp.cpp") << "Device Name:" << androidutilities.getDeviceName();
-	ofLogNotice("ofApp.cpp") << "Android Api Level:" << androidutilities.getAndroidApiLevel();
-	ofLogNotice("ofApp.cpp") << "Package Name:" << androidutilities.getPackageName();
-	ofLogNotice("ofApp.cpp") << "Installer Package:" << androidutilities.getInstallerPackage();
+	ofLogNotice("ofApp.cpp") << "Device Name:" << ofxandroidutilities.getDeviceName();
+	ofLogNotice("ofApp.cpp") << "Android Api Level:" << ofxandroidutilities.getAndroidApiLevel();
+	ofLogNotice("ofApp.cpp") << "Package Name:" << ofxandroidutilities.getPackageName();
+	ofLogNotice("ofApp.cpp") << "Installer Package:" << ofxandroidutilities.getInstallerPackage();
+	ofxandroidutilities.openURL("http://openframeworks.cc");
 	ofLogNotice("ofApp.cpp") << "etc..";
 }
 
