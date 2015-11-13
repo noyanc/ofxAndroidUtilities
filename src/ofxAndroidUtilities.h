@@ -71,8 +71,8 @@ public:
 	void sendEmail(std::string toEmailAddress, std::string subject, std::string message);
 
 	//Storage utilities
-	std::string getUserPrefs();
-	void setUserPrefs(std::string prefStr);
+	std::string getSharedPreferences(std::string key, std::string defValue);
+	void setSharedPreferences(std::string key, std::string value);
 
 	//Localisation utilities
 	std::string getCountrySim();

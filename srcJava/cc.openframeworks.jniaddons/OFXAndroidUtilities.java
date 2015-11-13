@@ -186,15 +186,15 @@ public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 	}
 
 	
-    private static String getUserPrefs() {
+    private static String getSharedPreferences(String key, String defValue) {
         SharedPreferences sp = activity.getPreferences(Context.MODE_PRIVATE);
-        return sp.getString("userprefs", "0");
+        return sp.getString(key, defValue);
     }
 
 
-    private static void setUserPrefs(String prefStr) {
+    private static void setSharedPreferences(String key, String value) {
         SharedPreferences.Editor spe = activity.getPreferences(Context.MODE_PRIVATE).edit();
-        spe.putString("userprefs", prefStr);
+        spe.putString(key, value);
         spe.commit();
     }
 
