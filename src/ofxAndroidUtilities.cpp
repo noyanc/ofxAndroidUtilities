@@ -107,11 +107,25 @@ std::string ofxAndroidUtilities::loadURL(std::string url) {
 
 
 void ofxAndroidUtilities::saveURL(std::string url, std::string fileName) {
-	//This method saves an url to a file. Useful for not saving the whole data without passing via jni.
-	//Then you can always open the saved file in the C++ side.
+	//This method saves an url to a file. Mainly for text data such as html, xml, txt, vs..
+	//Useful for saving the data in Java side without transferring it via jni pipes.
+	//Then you can open the saved file in the C++ side when it is needed.
 	jstring jStringParam1 = ofGetJNIEnv()->NewStringUTF(url.c_str());
 	jstring jStringParam2 = ofGetJNIEnv()->NewStringUTF(fileName.c_str());
 	jmethodID midCallBack = ofGetJNIEnv()->GetStaticMethodID(thisJava, "saveURL", "(Ljava/lang/String;Ljava/lang/String;)V");
+	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, midCallBack, jStringParam1, jStringParam2);
+	ofGetJNIEnv()->DeleteLocalRef(jStringParam1);
+	ofGetJNIEnv()->DeleteLocalRef(jStringParam2);
+}
+
+
+void ofxAndroidUtilities::downloadURL(std::string url, std::string fileName) {
+	//This method saves an url to a file. Mainly for binary data.
+	//Useful for saving the data in Java side without transferring it via jni pipes.
+	//Then you can open the saved file in the C++ side when it is needed.
+	jstring jStringParam1 = ofGetJNIEnv()->NewStringUTF(url.c_str());
+	jstring jStringParam2 = ofGetJNIEnv()->NewStringUTF(fileName.c_str());
+	jmethodID midCallBack = ofGetJNIEnv()->GetStaticMethodID(thisJava, "downloadURL", "(Ljava/lang/String;Ljava/lang/String;)V");
 	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, midCallBack, jStringParam1, jStringParam2);
 	ofGetJNIEnv()->DeleteLocalRef(jStringParam1);
 	ofGetJNIEnv()->DeleteLocalRef(jStringParam2);

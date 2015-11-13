@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.net.URL;
 import java.util.Locale;
@@ -173,6 +175,30 @@ public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 		
 	}
 
+	
+	private void downloadURL(String downloadurl, String savepath) throws Exception {
+		Log.i("OFXAndroidUtilities", "Downloading from " + downloadurl);
+		URL url = new URL (downloadurl);
+		InputStream input = url.openStream();
+		try {
+		    //The sdcard directory e.g. '/sdcard' can be used directly, or 
+		    //more safely abstracted with getExternalStorageDirectory()
+			Log.i("OFXAndroidUtilities", "Saving to " + savepath);
+		    OutputStream output = new FileOutputStream (savepath);
+		    try {
+		        byte[] buffer = new byte[2048];
+		        int bytesRead = 0;
+		        while ((bytesRead = input.read(buffer, 0, buffer.length)) >= 0) {
+		            output.write(buffer, 0, bytesRead);
+		        }
+		    } finally {
+		        output.close();
+		    }
+		} finally {
+		    input.close();
+		}
+	}
+	
 	
 	private static void sendEmail(String toEmailAddress, String subject, String message) {
 		if (toEmailAddress.equals("")) toEmailAddress = "info@nitragames.com";

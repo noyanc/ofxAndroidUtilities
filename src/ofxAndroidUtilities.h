@@ -68,6 +68,7 @@ public:
 	void openURL(std::string url);
 	std::string loadURL(std::string url);
 	void saveURL(std::string url, std::string fileName);
+	void downloadURL(std::string url, std::string fileName);
 	void sendEmail(std::string toEmailAddress, std::string subject, std::string message);
 
 	//Storage utilities
