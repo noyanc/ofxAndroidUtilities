@@ -6,7 +6,7 @@ This software is an openFrameworks-Android addon with MIT Licence. You can visit
 
 USAGE:
 
-Copy the srcJava/cc/openframeworks/ofxaddons directory under your srcJava. And add the src part of the addon like regular ofx addons.
+Copy the OFXAndroidUtilities.java file to the directory srcJava/cc/openframeworks/ofxaddons of your project. And add the src part of the addon like regular ofx addons.
 
 Then the rest is easier:
 
