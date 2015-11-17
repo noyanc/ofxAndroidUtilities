@@ -22,7 +22,7 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 
 
-//Comments are available in the ofxAndroidUtilities.h file
+//Comments are available in the ofxAndroidUtilities.cpp file
 
 public class OFXAndroidUtilities extends cc.openframeworks.OFAndroidObject{
 	
