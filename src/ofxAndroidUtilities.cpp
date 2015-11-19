@@ -166,7 +166,7 @@ void ofxAndroidUtilities::setSharedPreferences(std::string key, std::string valu
 	//This method saves a value into Shared Preferences.
 	jstring jStringParam1 = ofGetJNIEnv()->NewStringUTF(key.c_str());
 	jstring jStringParam2 = ofGetJNIEnv()->NewStringUTF(value.c_str());
-	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "setSharedPreferences", "(Ljava/lang/String;)V"), jStringParam1, jStringParam2);
+	ofGetJNIEnv()->CallStaticVoidMethod(thisJava, ofGetJNIEnv()->GetStaticMethodID(thisJava, "setSharedPreferences", "(Ljava/lang/String;Ljava/lang/String;)V"), jStringParam1, jStringParam2);
 	ofGetJNIEnv()->DeleteLocalRef(jStringParam1);
 	ofGetJNIEnv()->DeleteLocalRef(jStringParam2);
 }
